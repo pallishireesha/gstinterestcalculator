@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yearly Data Tables</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+  <!-- Table for Year 2022 -->
+  <h2>Year 2022</h2>
+  <table class="table" id="dataTable2022">
+    <!-- Table headers and rows for 2022 (similar to the previous example) -->
+  </table>
+
+  <!-- Table for Year 2023 -->
+  <h2>Year 2023</h2>
+  <table class="table" id="dataTable2023">
+    <!-- Table headers and rows for 2023 (similar to the previous example) -->
+  </table>
+
+  <!-- Add the Download PDF buttons for each year -->
+  <button class="btn btn-primary" onclick="downloadPDF('dataTable2022', '2022')">Download PDF (2022)</button>
+  <button class="btn btn-primary" onclick="downloadPDF('dataTable2023', '2023')">Download PDF (2023)</button>
+</div>
+
+<script>
+function downloadPDF(tableId, year) {
+  var doc = new jsPDF();
+  doc.text('Yearly Data Table ' + year, 10, 10);
+  doc.autoTable({
+    html: '#' + tableId,
+    startY: 20
+  });
+  doc.save('table_' + year + '.pdf');
+}
+</script>
+
+</body>
+</html>

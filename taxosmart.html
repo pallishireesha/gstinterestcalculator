@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <div class="tab-pane active" id="201718">
+        <h1>GST Tax Interest Calculator for 2017-18</h1>
+     <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead style="background-color: #337ab7; color: #fff">
+                <tr>
+                    <th scope="col">-</th>
+                    <th scope="col">Month</th>
+                    <th scope="col">Due Date(considering Extension If Any)</th>
+                    <th scope="col">Filed On (dd-mm-yyyy)</th>
+                    <th scope="col">No Of Days Delay</th>
+                    <th scope="col">CGST Amount</th>
+                    <th scope="col">CGST Interest @ 18%</th>
+                    <th scope="col">SGST Amount</th>
+                    <th scope="col">SGST Interest @ 18%</th>
+                    <th scope="col">IGST Amount</th>
+                    <th scope="col">IGST Interest @ 18%</th>
+                    <th scope="col">Total Amount</th>
+                    <th scope="col">Total Interest @ 18%</th>
+                    <th scope="col">Related Notification</th>
+
+                </tr>
+                <tr>
+                    <th style="text-align: center">1</th>
+                    <th style="text-align: center">2</th>
+                    <th style="text-align: center">3</th>
+                    <th style="text-align: center">4</th>
+                    <th style="text-align: center">5</th>
+                    <th style="text-align: center">6</th>
+                    <th style="text-align: center">7</th>
+                    <th style="text-align: center">8</th>
+                    <th style="text-align: center">9</th>
+                    <th style="text-align: center">10</th>
+                    <th style="text-align: center">11</th>
+                    <th style="text-align: center">12</th>
+                    <th style="text-align: center">13</th>
+                    <th style="text-align: center">14</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" rowspan="9" style="vertical-align: middle">2<br>0<br>1<br>7<br>-<br>1<br>8<br></th>
+                    <td>Jul-17</td>
+                    <td ng-init="gCtr.g201718.a.dueDate='25-08-2017'" id="duedate">25-08-2017</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.a.filedOn" ng-change="gCtr.calcNoOfDays('g201718','a')" id="dateoffiling" onchange="interestAmount()"></td>
+                    <td ng-model="gCtr.g201718.a.noOfDays" ng-init="gCtr.g201718.a.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding" id="delaydays">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.a.cgstAmt" ng-init="gCtr.g201718.a.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','a')"></td>
+                    <td ng-init="gCtr.g201718.a.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.a.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.a.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.a.igstAmt" ng-init="gCtr.g201718.a.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','a')"></td>
+                    <td ng-init="gCtr.g201718.a.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.a.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.a.totalInt=0" class="ng-binding">0</td>
+                    <td>(1) 21/2017 CT-08.08.2017 (2) 24/2017 CT-21.08.2017</td>
+
+                </tr>
+                <tr>
+                    <td>Aug-17</td>
+                    <td ng-init="gCtr.g201718.b.dueDate='20-09-2017'" id="duedate">20-09-2017</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.b.filedOn" ng-change="gCtr.calcNoOfDays('g201718','b')" ></td>
+                    <td ng-model="gCtr.g201718.b.noOfDays" ng-init="gCtr.g201718.b.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.b.cgstAmt" ng-init="gCtr.g201718.b.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','b')"></td>
+                    <td ng-init="gCtr.g201718.b.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.b.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.b.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.b.igstAmt" ng-init="gCtr.g201718.b.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','b')"></td>
+                    <td ng-init="gCtr.g201718.b.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.b.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.b.totalInt=0" class="ng-binding">0</td>
+                    <td>21/2017 CT - 08.08.2017</td>
+                </tr>
+                <tr>
+                    <td>Sep-17</td>
+                    <td ng-init="gCtr.g201718.c.dueDate='20-10-2017'">20-10-2017</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.c.filedOn" ng-change="gCtr.calcNoOfDays('g201718','c')"></td>
+                    <td ng-model="gCtr.g201718.c.noOfDays" ng-init="gCtr.g201718.c.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.c.cgstAmt" ng-init="gCtr.g201718.c.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','c')"></td>
+                    <td ng-init="gCtr.g201718.c.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.c.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.c.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.c.igstAmt" ng-init="gCtr.g201718.c.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','c')"></td>
+                    <td ng-init="gCtr.g201718.c.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.c.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.c.totalInt=0" class="ng-binding">0</td>
+                    <td>35/2017 CT - 15.09.2017</td>
+                </tr>
+                <tr>
+                    <td>Oct-17</td>
+                    <td ng-init="gCtr.g201718.d.dueDate='20-11-2017'">20-11-2017</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.d.filedOn" ng-change="gCtr.calcNoOfDays('g201718','d')"></td>
+                    <td ng-model="gCtr.g201718.d.noOfDays" ng-init="gCtr.g201718.d.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.d.cgstAmt" ng-init="gCtr.g201718.d.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','d')"></td>
+                    <td ng-init="gCtr.g201718.d.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.d.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.d.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.d.igstAmt" ng-init="gCtr.g201718.d.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','d')"></td>
+                    <td ng-init="gCtr.g201718.d.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.d.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.d.totalInt=0" class="ng-binding">0</td>
+                    <td>35/2017 CT - 15.09.2017</td>
+                </tr>
+                <tr>
+                    <td>Nov-17</td>
+                    <td ng-init="gCtr.g201718.e.dueDate='20-12-2017'">20-12-2017</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.e.filedOn" ng-change="gCtr.calcNoOfDays('g201718','e')"></td>
+                    <td ng-model="gCtr.g201718.e.noOfDays" ng-init="gCtr.g201718.e.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.e.cgstAmt" ng-init="gCtr.g201718.e.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','e')"></td>
+                    <td ng-init="gCtr.g201718.e.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.e.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.e.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.e.igstAmt" ng-init="gCtr.g201718.e.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','e')"></td>
+                    <td ng-init="gCtr.g201718.e.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.e.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.e.totalInt=0" class="ng-binding">0</td>
+                    <td>35/2017 CT - 15.09.2017</td>
+                </tr>
+                <tr>
+                    <td>Dec-17</td>
+                    <td ng-init="gCtr.g201718.f.dueDate='22-01-2018'">22-01-2018</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.f.filedOn" ng-change="gCtr.calcNoOfDays('g201718','f')"></td>
+                    <td ng-model="gCtr.g201718.f.noOfDays" ng-init="gCtr.g201718.f.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.f.cgstAmt" ng-init="gCtr.g201718.f.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','f')"></td>
+                    <td ng-init="gCtr.g201718.f.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.f.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.f.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.f.igstAmt" ng-init="gCtr.g201718.f.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','f')"></td>
+                    <td ng-init="gCtr.g201718.f.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.f.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.f.totalInt=0" class="ng-binding">0</td>
+                    <td>(1) 35/2017 CT-15.09.2017 (2)02/2018 CT-20.01.2018</td>
+                </tr>
+                <tr>
+                    <td>Jan-18</td>
+                    <td ng-init="gCtr.g201718.g.dueDate='20-02-2018'">20-02-2018</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.g.filedOn" ng-change="gCtr.calcNoOfDays('g201718','g')"></td>
+                    <td ng-model="gCtr.g201718.g.noOfDays" ng-init="gCtr.g201718.g.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.g.cgstAmt" ng-init="gCtr.g201718.g.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','g')"></td>
+                    <td ng-init="gCtr.g201718.g.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.g.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.g.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.g.igstAmt" ng-init="gCtr.g201718.g.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','g')"></td>
+                    <td ng-init="gCtr.g201718.g.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.g.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.g.totalInt=0" class="ng-binding">0</td>
+                    <td>56/2017 CT-15.11.2017</td>
+                </tr>
+                <tr>
+                    <td>Feb-18</td>
+                    <td ng-init="gCtr.g201718.h.dueDate='20-03-2018'">20-03-2018</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.h.filedOn" ng-change="gCtr.calcNoOfDays('g201718','h')"></td>
+                    <td ng-model="gCtr.g201718.h.noOfDays" ng-init="gCtr.g201718.h.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.h.cgstAmt" ng-init="gCtr.g201718.h.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','h')"></td>
+                    <td ng-init="gCtr.g201718.h.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.h.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.h.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.h.igstAmt" ng-init="gCtr.g201718.h.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','h')"></td>
+                    <td ng-init="gCtr.g201718.h.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.h.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.h.totalInt=0" class="ng-binding">0</td>
+                    <td>56/2017 CT-15.11.2017</td>
+                </tr>
+                <tr>
+                    <td>Mar-18</td>
+                    <td ng-init="gCtr.g201718.i.dueDate='20-04-2018'">20-04-2018</td>
+                    <td><input type="date" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.i.filedOn" ng-change="gCtr.calcNoOfDays('g201718','i')"></td>
+                    <td ng-model="gCtr.g201718.i.noOfDays" ng-init="gCtr.g201718.i.noOfDays=0" class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.i.cgstAmt" ng-init="gCtr.g201718.i.cgstAmt=0" ng-change="gCtr.calcCgstRate('g201718','i')"></td>
+                    <td ng-init="gCtr.g201718.i.cgstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.i.sgstAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.i.sgstInt=0" class="ng-binding">0</td>
+                    <td><input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="gCtr.g201718.i.igstAmt" ng-init="gCtr.g201718.i.igstAmt=0" ng-change="gCtr.calcIgstRate('g201718','i')"></td>
+                    <td ng-init="gCtr.g201718.i.igstInt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.i.totalAmt=0" class="ng-binding">0</td>
+                    <td ng-init="gCtr.g201718.i.totalInt=0" class="ng-binding">0</td>
+                    <td>56/2017 CT-15.11.2017</td>
+                </tr>
+                <tr style="color: red">
+                    <th scope="row"></th>
+                    <td colspan="3" style="text-align: center"><h4>Total</h4></td>
+                    <td></td>
+                    <td ng-init="gCtr.g201718.grandCgstAmt=0"><h4 class="ng-binding">0</h4></td>
+                    <td ng-init="gCtr.g201718.grandCgstInt=0"><h4 class="ng-binding">0</h4></td>
+                    <td ng-init="gCtr.g201718.grandSgstAmt=0"><h4 class="ng-binding">0</h4></td>
+                    <td ng-init="gCtr.g201718.grandSgstInt=0"><h4 class="ng-binding">0</h4></td>
+                    <td ng-init="gCtr.g201718.grandIgstAmt=0"><h4 class="ng-binding">0</h4></td>
+                    <td ng-init="gCtr.g201718.grandIgstInt=0"><h4 class="ng-binding">0</h4></td>
+                    <td ng-init="gCtr.g201718.grandTotalAmt=0"><h4><b class="ng-binding">0</b></h4></td>
+                    <td ng-init="gCtr.g201718.grandTotalInt=0"><h4><b class="ng-binding">0</b></h4></td>
+                    <td></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+</div>
+        <br>
+    </div>
+    <script>
+        let interestAmount = () => {
+          var date1 = document.getElementById("duedate").textContent;
+          var chunks = date1.split('-');
+          var date1 = [chunks[1],chunks[0],chunks[2]].join("-");
+          var date2 = document.getElementById("dateoffiling").value;
+          var date1=new Date(date1);
+          var date2= new Date(date2);
+          var time_difference = date2.getTime() - date1.getTime(); 
+          var delaydays = Math.round(time_difference / (1000 * 60 * 60 * 24)); 
+          document.getElementById("delaydays").innerHTML=delaydays;
+          var cgstamount = document.getElementById("cgstamount").value;
+          var sgstamount = document.getElementById("cgstamount").value;
+          document.getElementById("sgstamount").innerHTML=sgstamount;
+          var cgstinterest= (delaydays/365)*(18/100)*cgstamount;
+          var cgstinterest = cgstinterest.toFixed(2);
+          document.getElementById("cgstinterest").innerHTML = cgstinterest;
+          var sgstinterest = cgstinterest;
+          document.getElementById("sgstinterest").innerHTML = sgstinterest;
+
+          var igstamount = document.getElementById("igstamount").value;
+          var igstinterest = (delaydays/365)*(18/100)*igstamount;
+          var igstinterest =igstinterest.toFixed(2);
+          document.getElementById("igstinterest").innerHTML = igstinterest;
+
+          var totalamount = Number(cgstamount) + Number(sgstamount) + Number(igstamount);
+          document.getElementById("totalamount").innerHTML = totalamount;
+
+          var totalinterest = Number(cgstinterest) + Number(sgstinterest) + Number(igstinterest);
+          var totalinterest = totalinterest.toFixed(2);
+          document.getElementById("totalinterest").innerHTML = totalinterest;
+        }
+      </script>
+</html>

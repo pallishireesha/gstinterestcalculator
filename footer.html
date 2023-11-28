@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<footer>
+    <section class="container-fluid justify-content-center align-items-center bg-success d-inlineblock p-5">
+      <div class="row">
+        <div class="col-12 ol-sm-12 col-md-6 col-lg-3 col-xl-3 text-light">
+        <h4>About us</h4>
+        <p class="justify-content-center">
+          M/s KRR Tax Management was established in 2014 and by young
+          dedicated professionals. Over the years the organization has grown
+          at a rapid pace in its size as well as capabilities.
+        </p>
+      </div>
+      <div class="col-12 ol-sm-12 col-md-6 col-lg-3 col-xl-3 text-light ">
+        <h4>Address</h4>
+        <p>
+          Flat.No-100<br />
+          Near RTC Bustand<br />
+          Shodhan Nagar<br />
+          Nellore.<br />
+          524003<br />
+          Andhrapradesh
+        </p>
+      </div>
+      <div class="col-12 ol-sm-12 col-md-6 col-lg-3 col-xl-3 text-light">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.php" class="text-light">Home</a></li>
+          <li><a href="about.html" class="text-light">About us</a></li>
+          <li><a href="gstinvoice.html" class="text-light">GST Invoice</a></li>
+          <li><a href="gsttaxation.html" class="text-light">GST Taxation</a></li>
+          <li><a href="services.html" class="text-light">Services</a></li>
+          <li><a href="index.html" class="text-light">Login</a></li>
+          <li><a href="contactus.html" class="text-light">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-12 ol-sm-12 col-md-6 col-lg-3 col-xl-3 text-light">
+        <h4>Contact us</h4>
+        <br />
+        <p>
+          <i class="fa fa-mobile-phone" style="font-size: 24px"></i>
+          +91 7893106789<br />
+          <i class="fa fa-envelope" style="font-size: 15px"></i>
+          raghuaces@gmail.com<br/>
+          <li><a href="tel:+917893106789" style="color: white;">Call us</a></li>
+          <li><a href="mailto:raghuaces@gmail.com" style="color: white;">Mail To</a></li>
+        </p>
+      </div>
+      </div>
+      </div>
+    </section>
+  </footer>
+  <script src="interest.js"></script>
+
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-b7455443-2a0b-4268-97a1-edd500ea169c" data-elfsight-app-lazy></div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <script src="BOOTSTRAP/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+   <script src="assets/plugins/countMe.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+       window.onload = ()=>{
+           // $(selector).countMe(delay,speed)
+           $("#clients-ctn").countMe(40,18);
+           $("#views-ctn").countMe(500, 0);
+           $("#regs-ctn").countMe(40, 16);
+           $("#clients1-ctn").countMe(40,10);
+           //$("#clients-ctn").countMe(100,200);
+        }
+       </script>
+       <script>
+        var owl = $('.owl-carousel');
+      owl.owlCarousel({
+          loop:true,
+          margin:10,
+          autoplay:true,
+          autoplayTimeout:1000,
+          autoplayHoverpause:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },            
+              960:{
+                  items:3
+              },
+              1200:{
+                  items:4
+              }
+          }
+      });
+      owl.on('mousewheel', '.owl-stage', function (e) {
+          if (e.deltaY>0) {
+              owl.trigger('next.owl');
+          } else {
+              owl.trigger('prev.owl');
+          }
+          e.preventDefault();
+      });
+      </script>
+</body>
+  </html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GST Tax Interest Calculator</title>
+</head>
+<body>
+
+  <!-- Your existing HTML content -->
+  User
+<div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"> <h1>GST Tax Interest Calculator for 2017-18</h1>
+                <div class="table-responsive">
+                <table class="table table-bordered">
+                <thead>
+                <tr>
+                <th scope="col">-</th>
+                <th scope="col">Month</th>
+                <th scope="col">Due Date(considering Extension If Any)</th>
+                <th scope="col">Filed On (dd-mm-yyyy)</th>
+                <th scope="col">No Of Days Delay</th>
+                <th scope="col">CGST Amount</th>
+                <th scope="col">CGST Interest @ 18%</th>
+                <th scope="col">SGST Amount</th>
+                <th scope="col">SGST Interest @ 18%</th>
+                <th scope="col">IGST Amount</th>
+                <th scope="col">IGST Interest @ 18%</th>
+                <th scope="col">Total Amount</th>
+                <th scope="col">Total Interest @ 18%</th>
+                <th scope="col">Related Notification</th>
+                </tr>
+                <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <th rowspan="9" scope="row">2<br />0<br />1<br />7<br />-<br />1<br />8</th>
+                <td>Jul-17</td>
+                <td id="duedate">25-08-2017</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" action="" id="dateoffiling" onchange="interestAmount()"/></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding" id="delaydays">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" id="cgstamount" onchange="interestAmount()"/></td>
+                <td class="ng-binding" id="cgstinterest">0</td>
+                <td class="ng-binding" id="sgstamount">0</td>
+                <td class="ng-binding" id="sgstinterest">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" id="igstamount" onchange="interestAmount()"/></td>
+                <td class="ng-binding" id="igstinterest">0</td>
+                <td class="ng-binding" id="totalamount">0</td>
+                <td class="ng-binding" id="totalinterest">0</td>
+                <td>(1) 21/2017 CT-08.08.2017 (2) 24/2017 CT-21.08.2017</td>
+                </tr>
+                <tr>
+                <td>Aug-17</td>
+                <td id="duedate">20-09-2017</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" action="" id="dateoffiling" onchange="interestAmount()"/></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding" id="delaydays">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" id="cgstamount" onchange="interestAmount()"/></td>
+                <td class="ng-binding" id="cgstinterest">0</td>
+                <td class="ng-binding" id="sgstamount">0</td>
+                <td class="ng-binding" id="sgstinterest">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" id="igstamount" onchange="interestAmount()"/></td>
+                <td class="ng-binding" id="igstinterest">0</td>
+                <td class="ng-binding" id="totalamount">0</td>
+                <td class="ng-binding" id="totalinterest">0</td>
+                <td>21/2017 CT - 08.08.2017</td>
+                </tr>
+                <tr>
+                <td>Sep-17</td>
+                <td>20-10-2017</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" /></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td>35/2017 CT - 15.09.2017</td>
+                </tr>
+                <tr>
+                <td>Oct-17</td>
+                <td>20-11-2017</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" /></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td>35/2017 CT - 15.09.2017</td>
+                </tr>
+                <tr>
+                <td>Nov-17</td>
+                <td>20-12-2017</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" /></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td>35/2017 CT - 15.09.2017</td>
+                </tr>
+                <tr>
+                <td>Dec-17</td>
+                <td>22-01-2018</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" /></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td>(1) 35/2017 CT-15.09.2017 (2)02/2018 CT-20.01.2018</td>
+                </tr>
+                <tr>
+                <td>Jan-18</td>
+                <td>20-02-2018</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" /></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td>56/2017 CT-15.11.2017</td>
+                </tr>
+                <tr>
+                <td>Feb-18</td>
+                <td>20-03-2018</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" /></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td>56/2017 CT-15.11.2017</td>
+                </tr>
+                <tr>
+                <td>Mar-18</td>
+                <td>20-04-2018</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="date" /></td>
+                <td class="ng-pristine ng-untouched ng-valid ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td><input class="form-control ng-pristine ng-untouched ng-valid" type="text" /></td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td class="ng-binding">0</td>
+                <td>56/2017 CT-15.11.2017</td>
+                </tr>
+                <tr>
+                <th scope="row">&nbsp;</th>
+                <td colspan="3">
+                <h4>Total</h4>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                <h4 class="ng-binding">0</h4>
+                </td>
+                <td>
+                <h4 class="ng-binding">0</h4>
+                </td>
+                <td>
+                <h4 class="ng-binding">0</h4>
+                </td>
+                <td>
+                <h4 class="ng-binding">0</h4>
+                </td>
+                <td>
+                <h4 class="ng-binding">0</h4>
+                </td>
+                <td>
+                <h4 class="ng-binding">0</h4>
+                </td>
+                <td>
+                <h4><strong class="ng-binding">0</strong></h4>
+                </td>
+                <td>
+                <h4><strong class="ng-binding">0</strong></h4>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+
+  <script>
+    function interestAmount() {
+      // Get the elements for CGST amount and date of filing
+      var cgstAmountElement = document.getElementById('cgstamount');
+      var dateOfFilingElement = document.getElementById('dateoffiling');
+
+      // Get the values
+      var cgstAmount = parseFloat(cgstAmountElement.value) || 0;
+      var dateOfFiling = new Date(dateOfFilingElement.value);
+
+      // Calculate the number of days delayed
+      var currentDate = new Date();
+      var delayDays = Math.max(0, Math.ceil((currentDate - dateOfFiling) / (1000 * 60 * 60 * 24)));
+
+      // Calculate interest (you might need to replace this formula with your actual logic)
+      var interestRate = 0.18; // 18%
+      var interest = cgstAmount * interestRate * (delayDays / 365);
+
+      // Update the HTML elements with the calculated values
+      document.getElementById('delaydays').textContent = delayDays;
+      document.getElementById('cgstinterest').textContent = interest.toFixed(2); // Assuming two decimal places for the interest
+
+      // You can add similar calculations for SGST and IGST amounts and interests here
+    }
+  </script>
+</div>
+
+</body>
+</html>

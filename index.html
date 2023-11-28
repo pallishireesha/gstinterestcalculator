@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTT-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Management</title>
+    </head>
+    <body>
+        <section class="bg container-fluid">
+            <div id="mySlide" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button
+                  data-bs-target="#mySlide"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></button>
+                <button data-bs-target="#mySlide" data-bs-slide-to="1"></button>
+                <button data-bs-target="#mySlide" data-bs-slide-to="2"></button>
+                <button data-bs-target="#mySlide" data-bs-slide-to="3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/bg1.jpg" class="w-100 image-fluid d-block" />
+                </div>
+                <div class="carousel-item">
+                  <img src="images/bg2.jpg" class="w-100 image-fluid d-block" />
+                </div>
+                <div class="carousel-item">
+                  <img src="images/bg3.jpg" class="w-100 image-fluid d-block" />
+                </div>
+                <div class="carousel-item">
+                  <img src="images/bg4.jpg" class="w-100 image-fluid d-block" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="container-fluid mt-1 bg-primary mb-2 p-5 justify-content-center align-items-center d-inlineblock">
+            <div class="row container-fluid">
+              <div class="col-12 col-xl-6 col-md-12 col-sm-12 text-light">
+                <h1>KRR TaxManagement</h1>
+                <p>
+                  M/s KRR Tax Management was established in 2014 and by young
+                  dedicated professionals. Over the years the organization has grown
+                  at a rapid pace in its size as well as capabilities.Providing Income
+                  tax and compliance services since 2014.Providing cost effective &
+                  process efficient services. Improvising the financial position of
+                  our clients. Over the years the organization has grown at a rapid
+                  pace in its size as well as capabilities.With a large number of
+                  assignments handled till now,We has developed expertise in the areas
+                  of Service Tax,Central Excise ,DGFT and Goods and Services Tax with
+                  upfront transparent pricing approach and helping to business grow.
+                </p>
+                <br>
+      
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Read More</a>
+                 <!--Modal-->
+              <form action="connect.php" method="post">
+                <div class="modal col-sm-md-12 fade" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="text-danger">Register Here</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="col-sm-12 text-dark">
+                          <form action="" text-dark>
+                            <div class="form-floating mb-3">
+                              <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                placeholder="username"
+                                class="form-control"
+                                required
+                              />
+                              <label>username</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input
+                                type="password"
+                                name="password"
+                                placeholder="password"
+                                class="form-control"
+                                required
+                              />
+                              <label>Password</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="Email"
+                                required
+                              />
+                              <label>Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input
+                                type="tel"
+                                name="mobile"
+                                id="mobile"
+                                class="form-control"
+                                placeholder="Mobile Number"
+                                required
+                              />
+                              <label>Mobile Number</label>
+                            </div>
+                            <div class="mb-3">
+                              <select class="form-select form-select-lg" name="" id="">
+                                <option selected>Select services</option>
+                                <option value="">GST Registration</option>
+                                <option value="">GST Interest Calculation</option>
+                                <option value="">Appeals</option>
+                                <option value="">Monthly Returns</option>
+                              </select>
+                            </div>
+                            <div class="mb-3 form-floating">
+                              <input type="submit" class="form-control btn btn-danger" />
+                            </div>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </form>
+                <!--Modal-->
+              </div>
+             
+              <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+                <form action="connect.php" method="post">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      name="username"
+                      id="username"
+                      placeholder="username"
+                      class="form-control"
+                      required
+                    />
+                    <label>username</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="password"
+                      class="form-control"
+                      required
+                    />
+                    <label>Password</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Email"
+                      required
+                    />
+                    <label>Email</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="tel"
+                      name="mobile"
+                      id="mobile"
+                      class="form-control"
+                      placeholder="Mobile Number"
+                      required
+                    />
+                    <label>Mobile Number</label>
+                  </div>
+                  <div class="mb-3">
+                    <select class="form-select form-select-lg" name="" id="">
+                      <option hidden>Select services</option>
+                      <option value="">GST Registration</option>
+                      <option value="">GST Interest Calculation</option>
+                      <option value="">Appeals</option>
+                      <option value="">Monthly Returns</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 form-floating">
+                    <input type="submit" class="form-control btn btn-danger" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+           <!--KRR Tax management-->
+    <section class="container-fluid bg-success p-5">
+      <div class="row container-fluid">
+      <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+      <div class="accordion accordion-flush " id="gstaccordion">
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                GST Monthly Filing Compliances
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>GSTR-1 Return Due on 10th of Every Month.</li>
+                  <li>GSTR-2 Return Due on 15th of Every Month.</li>
+                  <li>GSTR-3 Return Due on 20th of Every Month.</li>
+                  <li>GSTR-4 Return – Quarterly Return for Composition Suppliers Due on 18th.</li>
+                  <li>GSTR-5 Return – Monthly Return for Non-Resident Taxable Persons.</li>
+                  <li>GSTR-6 Return – Monthly Return for Input Service Distributors</li>
+                  <li>GSTR-7 Return – Monthly Return for Tax Deductors</li>
+                  <li>GSTR-8 Return – Monthly Return for E-Commerce Operator.</li>
+                  <li>GSTR-9 Return – Annual GST Return.</li>
+                  <li>GSTR-10 Return – Final GST Return.</li>
+                  <li>GSTR-11 Return – GST Return for UIN Holders.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                GST Registration
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul><h4>Required Documents</h4>
+                  <li>Photos of Proprietor/firm</li>
+                  <li>PAN Card of Proprietor/firm</li>
+                  <li>AADHAAR Cards of Proprietor/firm</li>
+                  <li>Mobile numbers & EmailID</li>
+                  <li>Electricity Bill/Municipal Tax Receipt</li>
+                  <li>Bank Statement/ Bank cancelled Cheque</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Replies to Notices
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul>
+                  <h4>Show Cause Notice Under GST:</h4>
+                  <li>What is Show Cause Notice Under GST?</li>
+                  <li>What does a Show Cause Notice Contain?</li>
+                <!--  <li>A show cause notice under GST typically includes the following information:</li>-->
+                  <li>Why is an SCN issued?</li>
+                  <li>What are some common reasons for the issuance of a Show Cause Notice?</li>
+                  <li>What if you fail to reply correctly to a Show Cause Notice?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                GST Invoice Creation
+              </button>
+            </h2>
+            <div id="flush-collapsefour" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>GSTR-1 Return Due on 10th of Every Month.</li>
+                  <li>GSTR-2 Return Due on 15th of Every Month.</li>
+                  <li>GSTR-3 Return Due on 20th of Every Month.</li>
+                  <li>GSTR-4 Return – Quarterly Return for Composition Suppliers Due on 18th.</li>
+                  <li>GSTR-5 Return – Monthly Return for Non-Resident Taxable Persons.</li>
+                  <li>GSTR-6 Return – Monthly Return for Input Service Distributors</li>
+                  <li>GSTR-7 Return – Monthly Return for Tax Deductors</li>
+                  <li>GSTR-8 Return – Monthly Return for E-Commerce Operator.</li>
+                  <li>GSTR-9 Return – Annual GST Return.</li>
+                  <li>GSTR-10 Return – Final GST Return.</li>
+                  <li>GSTR-11 Return – GST Return for UIN Holders.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefive">
+                GST Anual Return Filing Compliances
+              </button>
+            </h2>
+            <div id="flush-collapsefive" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>GSTR-1 Return Due on 10th of Every Month.</li>
+                  <li>GSTR-2 Return Due on 15th of Every Month.</li>
+                  <li>GSTR-3 Return Due on 20th of Every Month.</li>
+                  <li>GSTR-4 Return – Quarterly Return for Composition Suppliers Due on 18th.</li>
+                  <li>GSTR-5 Return – Monthly Return for Non-Resident Taxable Persons.</li>
+                  <li>GSTR-6 Return – Monthly Return for Input Service Distributors</li>
+                  <li>GSTR-7 Return – Monthly Return for Tax Deductors</li>
+                  <li>GSTR-8 Return – Monthly Return for E-Commerce Operator.</li>
+                  <li>GSTR-9 Return – Annual GST Return.</li>
+                  <li>GSTR-10 Return – Final GST Return.</li>
+                  <li>GSTR-11 Return – GST Return for UIN Holders.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsesix" aria-expanded="false" aria-controls="flush-collapsesix">
+                GST Audit Services
+              </button>
+            </h2>
+            <div id="flush-collapsesix" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul>
+                  <li>GSTR-1 Return Due on 10th of Every Month.</li>
+                  <li>GSTR-2 Return Due on 15th of Every Month.</li>
+                  <li>GSTR-3 Return Due on 20th of Every Month.</li>
+                  <li>GSTR-4 Return – Quarterly Return for Composition Suppliers Due on 18th.</li>
+                  <li>GSTR-5 Return – Monthly Return for Non-Resident Taxable Persons.</li>
+                  <li>GSTR-6 Return – Monthly Return for Input Service Distributors</li>
+                  <li>GSTR-7 Return – Monthly Return for Tax Deductors</li>
+                  <li>GSTR-8 Return – Monthly Return for E-Commerce Operator.</li>
+                  <li>GSTR-9 Return – Annual GST Return.</li>
+                  <li>GSTR-10 Return – Final GST Return.</li>
+                  <li>GSTR-11 Return – GST Return for UIN Holders.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseseven" aria-expanded="false" aria-controls="flush-collapseseven">
+                Appeals to Tribunals and High Courts
+              </button>
+            </h2>
+            <div id="flush-collapseseven" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul>
+                  <h4>Show Cause Notice Under GST:</h4>
+                  <li>What is Show Cause Notice Under GST?</li>
+                  <li>What does a Show Cause Notice Contain?</li>
+                <!--  <li>A show cause notice under GST typically includes the following information:</li>-->
+                  <li>Why is an SCN issued?</li>
+                  <li>What are some common reasons for the issuance of a Show Cause Notice?</li>
+                  <li>What if you fail to reply correctly to a Show Cause Notice?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item" style="background-color: rgb(196, 194, 180);">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseeight" aria-expanded="false" aria-controls="flush-collapseeight">
+                GST and Income Tax Appeals
+              </button>
+            </h2>
+            <div id="flush-collapseeight" class="accordion-collapse collapse" data-bs-parent="#gstaccordion">
+              <div class="accordion-body">
+                <ul>
+                  <h4>Show Cause Notice Under GST:</h4>
+                  <li>What is Show Cause Notice Under GST?</li>
+                  <li>What does a Show Cause Notice Contain?</li>
+                <!--  <li>A show cause notice under GST typically includes the following information:</li>-->
+                  <li>Why is an SCN issued?</li>
+                  <li>What are some common reasons for the issuance of a Show Cause Notice?</li>
+                  <li>What if you fail to reply correctly to a Show Cause Notice?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+          <img src="images/bb1.jpg" class="image-fluid w-100 h-100">
+        </div>
+        </div>
+    </section>
+    <!--KRR Tax management end-->
+             <!--KRR Tax carousel Services-->
+          <section class="container-fluid bg-danger mb-2 p-5">
+              <div class="container">
+                <h1 class="text-center">
+                  Our <span style="color: rgb(37, 56, 92)">Services</span>
+                </h1>
+                <p class="text-start"></p>
+              </div>
+              <div class="container text-justify">
+                <div id="cardSlide" class="carousel slide" data-bs-ride="carousel">
+                  <!--carousel indicators-->
+                  <div class="carousel-indicators">
+                    <button
+                      data-bs-target="#cardSlide"
+                      data-bs-slide-to="0"
+                      class="active bg-danger"
+                    ></button>
+                    <button
+                      data-bs-target="#cardSlide"
+                      data-bs-slide-to="1"
+                      class="bg-danger"
+                    ></button>
+                  </div>
+                  <!--carousel items-->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-xl-4 col-sm-12">
+                            <div class="card" style="width: 18rem">
+                              <img
+                                src="images/bg2.webp"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">GST Returns</h5>
+                                <p class="card-text">
+                                  GST return is a document that will contain all the
+                                  details of your sales, purchases, tax collected on
+                                  sales (output tax), and tax paid on purchases (input
+                                  tax).
+                                </p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Read More</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-4 col-sm-12">
+                            <div class="card" style="width: 18rem">
+                              <img
+                                src="images/e-Invoicing.png"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">GST e-Invoicing</h5>
+                                <p class="card-text">
+                                  All business owners and dealers who have registered
+                                  under the GST system must file GST returns according
+                                  to the nature of their business or transactions.
+                                </p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Read More</a>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <div class="col-xl-4 col-sm-12">
+                            <div class="card" style="width: 18rem">
+                              <img
+                                src="images/invoice1.png"
+                                class="card-img-top"
+                                alt="..."
+                              />
+                              <div class="card-body">
+                                <h5 class="card-title">GST Registration</h5>
+                                <p class="card-text">
+                                  GST Registration Requires specific documents. like
+                                  photo, aadhaar, PAN Card, Electricity bill etc.. After
+                                  submitting registration form we get it by 7 to 10
+                                  working days.
+                                </p>
+                                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Read More</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item cardSlide">
+                      <div class="container">
+                        <div class="card1-text">
+                          <div class="row">
+                            <div class="col-xl-4 col-sm-12">
+                              <div class="card" style="width: 18rem">
+                                <img
+                                  src="images/e-Invoicing.png"
+                                  class="card-img-top"
+                                  alt="..."
+                                />
+                                <div class="card-body">
+                                  <h5 class="card-title">GST Annual Returns</h5>
+                                  <p class="card-text">
+                                    Before filing GSTR 9, the taxpayer must file all
+                                    GSTR-1, GSTR-3B, or GSTR 4 returns. In case of over
+                                    dues, the GSTR registration holder will not be
+                                    allowed to file an annual GST annual return.
+                                  </p>
+                                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-12">
+                              <div class="card" style="width: 18rem">
+                                <img
+                                  src="images/invoice.png"
+                                  class="card-img-top"
+                                  alt="..."
+                                />
+                                <div class="card-body">
+                                  <h5 class="card-title">GST Audit Services</h5>
+                                  <p class="card-text">
+                                    Safety of our clients is the paramount measure we
+                                    follows strict measures. After properly screening
+                                    each of our drivers and employees, we train them
+                                    before going on ground...
+                                  </p>
+                                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-12">
+                              <div class="card" style="width: 18rem">
+                                <img
+                                  src="images/bb1.jpg"
+                                  class="card-img-top"
+                                  alt="..."
+                                />
+                                <div class="card-body">
+                                  <h5 class="card-title">GST Audit Services</h5>
+                                  <p class="card-text">
+                                    A GST Departmental Audit is conducted to ensure that
+                                    a business is in compliance with GST laws and
+                                    regulations. The GST Department may conduct an audit
+                                    if it suspects that a business is not....
+                                  </p>
+                                  <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Read More</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        
+            <!--KRR Tax Services end-->
+            <!---KRR count Section-->
+     <section class="container-fluid mb-2">
+        <div class="row text-bg-primary p-5">
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
+            <h1><i class="bi bi-person-fill-add"></i></h1>
+            <h1><span id="clients-ctn">125</span>+</h1>
+            <p> No. of Clients</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
+            <h1><i class="bi bi-person-lines-fill"></i></h1>
+            <h1><span id="views-ctn">505</span>+</h1>
+            <p> No. of views</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
+            <h1><i class="bi bi-person-up"></i></h1>
+            <h1><span id="regs-ctn">125</span>+</h1>
+            <p> No. of Registrations</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
+            <h1><i class="bi bi-person-fill-add"></i></h1>
+            <h1><span id="clients1-ctn">205</span>+</h1>
+            <p> No. of Clients</p>
+          </div>
+        </div>
+        </section>
+        <section class="companies ">
+          <h1 class="text-center">Our  &nbsp; <span style="color: red;">Services </span> </h1>
+          <div class="owl-carousel">
+           <h3 style="background-color: rgb(71, 158, 71);">GST Invoice Creation</h3>
+           <h3 style="background-color:rgb(206, 54, 54);">GST Registration</h3>
+           <h3 style="background-color: rgb(71, 71, 156);">GST Monthly Filing Compliances</h3>
+           <h3 style="background-color: rgb(35, 95, 95);">GST Anual Return Filing Compliances </h3>
+           <h3 style="background-color: rgb(161, 44, 122);">GST Audit Services</h3>
+           <h3 style="background-color:rgb(206, 54, 54);">GST and Income Tax Appeals</h3>
+           <h3 style="background-color: rgb(71, 71, 156);">Appeals to Tribunals and High Courts</h3>
+          </div>
+         </section>
+        <!---KRR count Section end-->
+    </html>
